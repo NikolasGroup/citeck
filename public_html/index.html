@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>custom binding</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    <body> 
+        <div class="work-area">
+            <h2>Ваши документы (<span data-bind="text: documentation().length"></span>)</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Статус</th>
+                        <th>Название</th>
+                        <th>Тип</th>
+                        <th>Загрузил</th>
+                        <th>Дата обновления</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: documentation">
+                    <tr>
+                        <td>
+                            <label><input class="checkbox" type="checkbox" data-bind="checked: doc"/><span></span></label>
+                        </td>
+                        <td data-bind="text: name"></td>
+                        <td data-bind="text: type"></td>
+                        <td data-bind="text: author"></td>
+                        <td data-bind="text: date"></td>
+                        <td><a href="#" data-bind="click: $root.removeDoc">Удалить</a></td>
+                    </tr>    
+                </tbody>
+            </table>
+            <div class="button">
+                <button data-bind="click: addDoc, enable: documentation().length < 10">Добавить документ</button>
+            </div>
+            <div id="dialog-add">
+                <form>
+                    <h2>Добавление нового документа</h2>
+                    <input id="name" type="text" placeholder="Название документа">
+                    <input id="type" type="text" placeholder="Тип документа">
+                </form>
+            </div>
+        </div>
+        <script type='text/javascript' language="javascript" src='js/jquery-1.10.1.min.js'></script>
+        <script type='text/javascript' language="javascript" src='js/jquery-ui.min.js'></script>
+        <script type="text/javascript" language="javascript" src="js/knockout-3.4.1.js"></script>
+        <script type='text/javascript' language="javascript" src='js/script.js'></script>
+    </body>
+</html>

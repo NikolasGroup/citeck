@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 14px;
+}
+.work-area{
+   width: 940px;
+   margin: 0 auto;
+}
+h2{
+    margin: 30px 0;
+}
+table{
+    width: 100%;
+    border-spacing: 0;
+    text-align: left;
+}
+table th{
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000;
+}
+table th:nth-child(1){
+    width: 65px;
+}
+table th:nth-child(2){
+    width: 250px;
+}
+table th:nth-child(3){
+    width: 220px;
+}
+table th:nth-child(4){
+    width: 200px;
+}
+table th:nth-child(5){
+    width: 140px;
+}
+table td{
+    border-bottom: 1px solid #e2e2e2;
+    padding: 6px 0;
+}
+table td:first-child{
+    text-align: center;
+}
+table a{
+    font-size: 12px;
+    color: #ec2c35;
+}
+table a:hover{
+    text-decoration: none;
+}
+label{
+    position: relative;
+    width:17px;
+    height: 17px;
+    margin: auto;
+    display: block;
+}
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+.checkbox + span {
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox:not(checked) + span:before {
+    content: '';  
+    width: 17px;
+    height: 17px;
+    background-image: url('../images/no.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+}
+.checkbox:checked + span:before {
+    background-image: url('../images/yes.png');
+}
+.button{
+    text-align: right;
+    margin: 30px 0;
+}
+button{
+    color:#FFF;
+    background: #ec2c35;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+button:disabled{
+    background: gray;
+}
+button:hover{
+    background: #b5030b;
+}
+button:disabled:hover{
+    background: gray;
+}
+
+#dialog-add{
+    display: none;
+}
+.ui-dialog{
+    background: #FFF;
+    padding: 10px;
+    border: 1px solid #000;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+.ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog h2{
+    margin: 0 0 15px 0;
+}
+.ui-dialog button{
+    margin: 0 10px 0;
+}
+input[type=text]{
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: OpenSans, Arial, sans-serif;
+    margin: 0 0 10px 0;
+}
+.ui-dialog .error{
+    font-size: 12px;
+    color: #ec2c35;
+    margin: 0 0 10px;
+    display: block;
+}
